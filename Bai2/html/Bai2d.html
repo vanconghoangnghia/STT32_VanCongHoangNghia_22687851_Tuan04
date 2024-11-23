@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="22719711" content="PhanPhuocHiep">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <title>Đăng ký tài khoản</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        Đăng ký tài khoản
+                    </div>
+                    <div class="card-body">
+                        <form action="#" id="_form" method="post" novalidate>
+                            <div class="row mb-3">
+                                <div class="col-4">
+                                    <label for="fname" class="form-label">First name</label>
+                                    <input class="form-control" type="text" id="fname" placeholder="First name" required>
+                                    <div class="invalid-feedback">Vui lòng nhập First name</div>
+                                </div>
+                                <div class="col-4">
+                                    <label for="lname" class="form-label">Last name</label>
+                                    <input class="form-control" type="text" id="lname" placeholder="Last name" required>
+                                    <div class="invalid-feedback">Vui lòng nhập Last name</div>
+                                </div>
+                                <div class="col-4">
+                                    <label for="uname" class="form-label">Username</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">@</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="uname" placeholder="Username" required>
+                                        <div class="invalid-feedback">Username không được để trống</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-6">
+                                    <label class="form-label" for="city">City</label>
+                                    <input type="text" class="form-control" placeholder="City" required>
+                                    <div class="invalid-feedback">City không được để trống</div>
+                                </div>
+                                <div class="col-3">
+                                    <label class="form-label" for="state">State</label>
+                                    <input type="text" class="form-control" placeholder="state" required>
+                                    <div class="invalid-feedback">State không được để trống</div>
+                                </div>
+                                <div class="col-3">
+                                    <label class="form-label" for="zip">Zip</label>
+                                    <input type="text" class="form-control" placeholder="Zip" required>
+                                    <div class="invalid-feedback">Zip không được để trống</div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="checkbox" name="check" id="terms" value="Agree to terms and conditions" required>
+                                <label for="terms" class="form-check-label">Agree to terms and conditions</label>
+                                <div class="invalid-feedback" >You must agree before submitting</div>
+                            </div>
+                            <input type="submit" value="Submit form" class="btn btn-primary">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script defer>
+        (function(){
+            'check';
+            window.addEventListener('load', function(){
+                var form = document.getElementById('_form');
+                form.addEventListener('submit', function(event){
+                    var checkbox = document.getElementById('terms');
+                    if(!form.checkValidity() || !checkbox.checked){
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            }, false);
+        })();
+    </script>
+</body>
+</html>

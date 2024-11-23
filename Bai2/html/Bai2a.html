@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <style>
+        .table tbody tr:first-child td {
+            border-top: 1px solid #dee2e6;
+        }
+
+        .table tbody tr:last-child td {
+            border-top: 1px solid #dee2e6;
+        }
+        .table td{
+            border: none; 
+        }
+        .container {
+            width: 700px;
+            border: 1px solid black;
+            padding: 25px;
+        }
+        .table {
+            margin-bottom: 30px;
+        }
+    </style>
+    <title>Payment</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Checkout</h2>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h4>Product 1</h4>
+                        Lorem ipsum dolor sit amet
+                    </td>
+                    <td class="text-end">
+                        <strong>$200</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>Product 2</h4>
+                        Lorem ipsum dolor sit amet
+                    </td>
+                    <td class="text-end">
+                        <strong>$120</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>Total</h4>
+                    </td>
+                    <td class="text-end">
+                        <strong>$320</strong>
+                    </td>
+                </tr>
+            </tbody>
+        </table> 
+        <h2>Credit Card Details</h2>
+        <hr>
+        <form action="#">
+            <div class="row mb-3">
+                <div class="col-7">
+                    <label class="form-label" for="cardholder">CARD HOLDER</label>
+                    <input type="text" class="form-control" placeholder="Card Holder" id="cardholder">
+                </div>
+                <div class="col-5">
+                    <label class="form-label" for="expiration">EXPIRATION DATE</label>
+                    <div class="row">
+                        <div class="col-5">
+                            <input type="text" class="form-control" id="expiration" placeholder="MM">
+                        </div>
+                        <div class="col-0">
+                            <div class="slash">/</div>
+                        </div>
+                        <div class="col-5">
+                            <input type="text" class="form-control" id="expiration"  placeholder="YY">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-8">
+                    <label for="cardnumber">CARD NUMBER</label>
+                    <input type="text" class="form-control" id="cardnumber" placeholder="Card Number">
+                </div>
+                <div class="col-4">
+                    <label for="cvc">CVC</label>
+                    <input type="text" class="form-control" id="cvc" placeholder="CVC">
+                </div>
+            </div>
+            <div class="row" style="margin-top: 20px;">
+                <input style="width: 100%;" class="btn btn-primary" type="button" value="Proceed">
+            </div>
+        </form>   
+    </div>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="22719711" content="PhanPhuocHiep">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <style>
+    footer {
+      margin-top: 50px;
+    }
+  </style>
+  <title>Galaxy Cinema: Hệ Thống Rạp Chiếu Phim Hiện Đại</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container"> 
+        <a href="../html/Bai3b.html" class="navbar-brand"> <img src="../img/logo-name.png" alt="logo"></a>  
+        <div><a href="#" class="navbar-brand"><img src="../img/muave.png" alt="#"></a></div>     
+        <div class="ml-auto d-lg-none">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse justify-content-lg-center" id="navbar">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Phim</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropMenu">
+                <a href="#" class="dropdown-item">Phim đang chiếu</a>  
+                <a href="#" class="dropdown-item">Phim sắp chiếu</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Góc điện ảnh</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropMenu">
+                <a href="#" class="dropdown-item">Bài viết mới</a>  
+                <a href="#" class="dropdown-item">Tin điện ảnh</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sự kiện</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropMenu">
+                <a href="#" class="dropdown-item">Sự kiện hot</a>  
+                <a href="#" class="dropdown-item">Sự kiện sắp diễn ra</a>
+                <a href="#" class="dropdown-item">Sự kiện đã diễn ra</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rạp/Giá vé</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropMenu">
+                <a href="#" class="dropdown-item">Rạp gần đây</a>  
+                <a href="#" class="dropdown-item">Giá vé</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <form action="#" class="form-inline d-none d-lg-flex ml-auto mr-3">
+          <input type="text" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+       </form>
+        <ul class="navbar-nav ml-auto ml-lg-0"> 
+          <li class="nav-item"><a href="#" class="nav-link" data-toggle="modal" data-target="#loginModal">Đăng nhập</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <ul class="nav nav-tabs" id="loginTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">Đăng nhập</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="dk-tab" data-toggle="tab" href="#dktk" role="tab" aria-controls="dk" aria-selected="false">Đăng kí</a>
+            </li>
+          </ul>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="tab-content" id="loginTabContent">
+            <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                <form>
+                  <div class="form-group"><span>Vui lòng đăng nhập trước khi mua vé để tích lũy điểm, cơ hội nhận thêm nhiều ưu đãi từ chương trình thành viên Galaxy Cinema.</span></div>
+                  <div class="form-group"><input type="text" class="form-control" id="email" placeholder="Email"></div>
+                  <div class="form-group"><input type="password" class="form-control" id="password" placeholder="Mật khẩu"></div>
+                  <div><a href="#">Quên mật khẩu?</a></div>
+                  <button style="width: 100%;" class="btn btn-warning">Đăng nhập</button>
+                </form>
+            </div>
+            <div class="tab-pane fade" id="dktk" role="tabpanel" aria-labelledby="dk-tab">
+              <form action="#">
+                <div class="form-group"><input type="text" class="form-control" placeholder="Họ tên"></div>
+                <div class="row form-group">
+                  <div class="col-6">
+                    <input type="text" class="form-control" placeholder="Số điện thoại">
+                  </div>
+                  <div class="col-6">
+                    <select name="gt" class="form-control">
+                      <option value="value1" selected="selected">Chọn giới tính</option>
+                      <option value="value2">Nam</option>
+                      <option value="value3">Nữ</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group"><input type="text" class="form-control" placeholder="Email"></div>
+                <div class="row form-group">
+                  <div class="col-6">
+                    <input type="password" class="form-control" placeholder="Mật khẩu">
+                  </div>
+                  <div class="col-6">
+                    <input type="password" class="form-control" placeholder="Xác nhận mật khẩu">
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-6">
+                    <select name="tp" class="form-control">
+                      <option value="value1" selected="selected">Chọn thành phố</option>
+                      <option value="value1" >Thành phố Hồ Chí Minh</option>
+                      <option value="value1" >Thành phố Hà Nội</option>
+                      <option value="value1" >Tân An</option>
+                      <option value="value1" >Đà Nẵng</option>
+                      <option value="value1" >Khác</option>
+                    </select>
+                  </div>
+                  <div class="col-6">
+                    <select name="Quan" class="form-control">
+                      <option value="value1" selected="selected">Quận</option>
+                      <option value="value2">Quận 1</option>
+                      <option value="value3">Quận 2</option>
+                      <option value="value4">Quận 3</option>
+                      <option value="value5">Quận 4</option>
+                      <option value="value6">Quận 5</option>
+                      <option value="value7">Quận 6</option>
+                      <option value="value8">Quận 7</option>
+                      <option value="value9">Quận 8</option>
+                      <option value="value10">Quận 9</option>
+                      <option value="value11">Quận 10</option>
+                      <option value="value12">Quận 11</option>
+                      <option value="value13">Quận 12</option>
+                      <option value="value13">Gò Vấp</option>
+                      <option value="value13">Tân Bình</option>
+                      <option value="value13">Khác</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group"><input type="text" class="form-control" placeholder="Địa chỉ"></div>
+                <div class="form-group"><input type="date" class="form-control" placeholder="Chọn ngày (dd/mm/yyyy)"></div>
+                <div class="form-group">Tôi đã đọc và đồng ý với <span style="color: orange; font-weight: bold;">CHÍNH SÁCH</span> của chương trình</div>
+                <button style="width: 100%;" class="btn btn-warning">Đăng kí</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <ul class="nav nav-tabs" id="movieTab" role="tablist">
+      <li class="nav-item"><a href="#dangchieu" class="nav-link active" id="dangchieu-tab" data-toggle="tab" role="tab" aria-controls="dangchieu" aria-selected="true">Đang chiếu</a></li>
+      <li class="nav-item"><a href="#sapchieu" class="nav-link" id="sapchieu-tab" data-toggle="tab" role="tab" aria-controls="sapchieu" aria-selected="false">Sắp chiếu</a></li>
+      <li class="nav-item"><a href="#phimimax" class="nav-link" id="phimimax-tab" data-toggle="tab" role="tab" aria-controls="phimimax" aria-selected="false">Phim IMAX</a></li>
+    </ul>
+    <div class="tab-content movie-list mx-auto" id="movieTabContent">
+        <div class="tab-pane fade show active" id="dangchieu" role="tabpanel" aria-labelledby="dangchieu-tab">
+          <div class="row mb-3">
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                <img src="../img/mai.png" alt="phimmai" class="img-fluid">
+                <span><b>Mai</b></span>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                <img src="../img/bathimbaothu.png" alt="phimbaphimbaothu" class="img-fluid">
+                <span><b>Bà phím báo thù</b></span>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                <img src="../img/gaplaichibau.png" alt="phimgaplaichibau" class="img-fluid">
+                <span><b>Gặp lại chị bầu</b></span>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                <img src="../img/hanhtinhcat.png" alt="phimhanhtinhcat" class="img-fluid">
+                <span><b>Hành tinh cát</b></span>
+              </div>
+          </div>
+          <div class="row mb-3">
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                <img src="../img/mai.png" alt="phimmai" class="img-fluid">
+                <span><b>Phim: Mai</b></span>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                <img src="../img/bathimbaothu.png" alt="phimbaphimbaothu" class="img-fluid">
+                <span><b>Phim: Bà phím báo thù</b></span>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                <img src="../img/gaplaichibau.png" alt="phimgaplaichibau" class="img-fluid">
+                <span><b>Phim: Gặp lại chị bầu</b></span>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                <img src="../img/hanhtinhcat.png" alt="phimhanhtinhcat" class="img-fluid">
+                <span><b>Phim:Hành tinh cát</b></span>
+              </div>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-outline-primary">Xem thêm>>></button>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="sapchieu" role="tabpanel" aria-labelledby="sapchieu-tab">
+          <h3>Đang cập nhật...</h3>
+        </div>
+        <div class="tab-pane fade" id="phimimax" role="tabpanel" aria-labelledby="phimimax-tab">
+          <h3>Đang cập nhật...</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="bg-dark py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center mb-3">
+          <img style="width: 150px;" src="../img/logo-footer.png" alt="logo_footer">
+          <span style="font-size: 18px; color: white;"><span>&copy;</span> BẢN QUYỀN THUỘC VỀ CÔNG TY CỔ PHẦN PHIM GALAXY CINEMA</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </body>
+</html>
